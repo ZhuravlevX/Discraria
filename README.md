@@ -1,4 +1,8 @@
-# Discraria
+<div align="center">
+    <img src="icon.png" width="80">
+    <h1>Discraria</h1>
+</div>
+
 
 ## About the mod
 **Discraria** is a mod created by combining the names Terraria and Discord. This mod displays activity in your Discord profile using Rich Presence. Currently, this mod displays the following information about the player:
