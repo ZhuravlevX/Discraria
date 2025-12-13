@@ -1,0 +1,4 @@
+displayName = Discraria
+author = ZhuravlevX
+version = 1.0.0
+dllReferences = DiscordRPC

@@ -1,0 +1,53 @@
+Mods: {
+	Discraria: {
+		Configs: {
+			Config: {
+				DisplayName: Rich Presence
+
+				ApplicationID: {
+					Label: Discord Application ID
+					Tooltip: Discord Rich Presence application ID.
+				}
+			}
+		}
+
+		RichPresence: {
+			Menu: In main menu
+			Died: Died
+			Fighting: Fighting
+			in: in
+			Explores: Explores the
+			forest: forest
+			desert: desert
+			jungle: jungle
+			snow: snow
+			corruption: corruption
+			crimson: crimson
+			hallow: hallow
+			underworld: underworld
+			beach: beach
+			dungeon: dungeon
+			space: space
+			glowing_mushroom: glowing mushroom
+			shimmer: shimmer
+			granite_cave: granite cave
+			marble_cave: marble cave
+			graveyard: graveyard
+			underground_desert: underground desert
+			bee_hive: bee hive
+			meteor: meteor
+			underground: underground
+			unknown: unknown
+			singleplayer: Singleplayer
+			multiplayer: Multiplayer
+			server: Server
+			classic: Classic
+			expert: Expert
+			master: Master
+			journey: Journey
+			HP: HP
+			Mana: Mana
+			Defense: Defense
+		}
+	}
+}

@@ -1,0 +1,53 @@
+Mods: {
+	Discraria: {
+		Configs: {
+			Config: {
+				DisplayName: Rich Presence
+
+				ApplicationID: {
+					Label: Discord Application ID
+					Tooltip: ID приложения Discord Rich Presence.
+				}
+			}
+		}
+
+		RichPresence: {
+			Menu: В главном меню
+			Died: Умер
+			Fighting: Сражается c
+			in: в
+			Explores: Исследует
+			forest: лес
+			desert: пустыню
+			jungle: джунгли
+			snow: снежную тайгу
+			corruption: порчу
+			crimson: багрянец
+			hallow: освящение
+			underworld: преисподню
+			beach: пляж
+			dungeon: темницу
+			space: космос
+			glowing_mushroom: светящиеся грибы
+			shimmer: мерцание
+			granite_cave: гранитные пещеры
+			marble_cave: мраморные пещеры
+			graveyard: кладбище
+			underground_desert: подземелье пустыни
+			bee_hive: пчелиный улей
+			meteor: метеорит
+			underground: подземелье
+			unknown: неизвестный
+			singleplayer: Одичночный
+			multiplayer: Мультиплеер
+			server: Сервер
+			classic: Классика
+			expert: Эксперт
+			master: Мастер
+			journey: Путешествие
+			HP: Здоровье
+			Mana: Мана
+			Defense: Защита
+		}
+	}
+}
