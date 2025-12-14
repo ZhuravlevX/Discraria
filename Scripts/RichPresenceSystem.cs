@@ -2,10 +2,10 @@
 using Terraria.ModLoader;
 using DiscordRPC;
 using Microsoft.Xna.Framework;
-using Discraria.Script.Tools;
+using Discraria.Scripts.Tools;
 using Terraria.ID;
 
-namespace Discraria.Script
+namespace Discraria.Scripts
 {
     public class RichPresenceSystem : ModSystem
     {

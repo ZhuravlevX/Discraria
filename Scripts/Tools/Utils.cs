@@ -1,6 +1,6 @@
 ﻿using Terraria.Localization;
 
-namespace Discraria.Script.Tools
+namespace Discraria.Scripts.Tools
 {
     public static class Utils
     {

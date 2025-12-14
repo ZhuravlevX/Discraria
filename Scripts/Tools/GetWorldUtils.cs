@@ -7,11 +7,11 @@ using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.Localization;
-using Discraria.Script.Tools;
+using Discraria.Scripts.Tools;
 using Newtonsoft.Json;
 using System.IO;
 
-namespace Discraria.Script.Tools
+namespace Discraria.Scripts.Tools
 {
     public static class GetWorldUtils
     {

@@ -2,7 +2,7 @@ using System.ComponentModel;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Config;
 
-namespace Discraria.Script
+namespace Discraria.Scripts
 {
     [Label("Rich Presence")]
     public class Config : ModConfig
