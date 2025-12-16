@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="icon.png" width="80">
+    <img src="icon_workshop.png" width="80">
     <h1>Discraria</h1>
 </div>
 
@@ -15,4 +15,3 @@
 
 > [!WARNING]
 > Sometimes, when frequently changing activity in your Discord profile using Rich Presence (*For example: frequent movement between biomes*), there is a chance that the activity may not update in your profile. To fix this issue, you need to wait a few seconds and then trigger an activity update (*For example: move to a new biome, die, summon a boss, exit to the menu*). However, this is not necessary, as after a while the activity will display the game information correctly again.
-
