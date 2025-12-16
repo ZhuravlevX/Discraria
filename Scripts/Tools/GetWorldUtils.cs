@@ -161,7 +161,7 @@ namespace Discraria.Scripts.Tools
                 {
                     var mod = ModContent.GetInstance<Discraria>();
 
-                    byte[] data = mod.GetFileBytes("Assets/boss.json");
+                    byte[] data = mod.GetFileBytes("Assets/bosses.json");
 
                     string json = Encoding.UTF8.GetString(data);
 
