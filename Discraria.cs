@@ -39,7 +39,7 @@ namespace Discraria
 
         public static void SetMenuStatus()
         {
-            client?.SetPresence(new RichPresence()
+            client?.SetPresence(new DiscordRPC.RichPresence()
             {
                 Details = Utils.GetTranslation("RichPresence", "Menu"),
                 Assets = new Assets()

@@ -3,11 +3,10 @@ using Terraria.ModLoader;
 using DiscordRPC;
 using Microsoft.Xna.Framework;
 using Discraria.Scripts.Tools;
-using Terraria.ID;
 
 namespace Discraria.Scripts
 {
-    public class RichPresenceSystem : ModSystem
+    public class RichPresence : ModSystem
     {
         private string lastState = "";
         private bool wasDead = false;
@@ -53,7 +52,7 @@ namespace Discraria.Scripts
                         $"{Tools.Utils.GetTranslation("RichPresence", "in")} " +
                         $"{Tools.Utils.GetTranslation("RichPresence", biome)}...";
 
-                    Discraria.client?.SetPresence(new RichPresence()
+                    Discraria.client?.SetPresence(new DiscordRPC.RichPresence()
                     {
                         Details = GetWorldUtils.GetWorldType(),
                         State = deathState,
@@ -90,7 +89,7 @@ namespace Discraria.Scripts
                 {
                     lastState = bossState;
 
-                    Discraria.client?.SetPresence(new RichPresence()
+                    Discraria.client?.SetPresence(new DiscordRPC.RichPresence()
                     {
                         Details = GetWorldUtils.GetWorldType(),
                         State = bossState,
@@ -114,7 +113,7 @@ namespace Discraria.Scripts
 
             lastState = newState;
 
-            Discraria.client?.SetPresence(new RichPresence()
+            Discraria.client?.SetPresence(new DiscordRPC.RichPresence()
             {
                 Details = GetWorldUtils.GetWorldType(),
                 State = newState,

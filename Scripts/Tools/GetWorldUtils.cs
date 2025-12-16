@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
-using Terraria.Localization;
-using Discraria.Scripts.Tools;
 using Newtonsoft.Json;
-using System.IO;
 
 namespace Discraria.Scripts.Tools
 {
