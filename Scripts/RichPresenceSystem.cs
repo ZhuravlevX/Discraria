@@ -121,13 +121,15 @@ namespace Discraria.Scripts
                 Assets = new Assets()
                 {
                     LargeImageKey = biome2,
-                    SmallImageKey = "terraria",
+                    SmallImageKey = GetWorldUtils.GetWorldIcon(),
                     SmallImageText = 
                     $"{Tools.Utils.GetTranslation("RichPresence", "HP")}: {player.statLifeMax2} | " +
                     $"{Tools.Utils.GetTranslation("RichPresence", "Mana")}: {player.statManaMax2} | " +
                     $"{Tools.Utils.GetTranslation("RichPresence", "Defense")}: {player.statDefense}"
                 }
             });
+            var presence = Discraria.client?.CurrentPresence;
+            ModContent.GetInstance<Discraria>().Logger.Info($"[DiscordRPC] Presence set: {presence.Details}, {presence.State}");
         }
     }
 }

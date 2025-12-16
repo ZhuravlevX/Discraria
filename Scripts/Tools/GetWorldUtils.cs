@@ -15,6 +15,9 @@ namespace Discraria.Scripts.Tools
 {
     public static class GetWorldUtils
     {
+        static Dictionary<string, string> _seedCache;
+        static Dictionary<string, string> _bossCache;
+
         public static string GetWorldType()
         {
             string type = Main.netMode switch
@@ -36,6 +39,53 @@ namespace Discraria.Scripts.Tools
 
             return $"{Utils.GetTranslation("RichPresence", type)} ({Utils.GetTranslation("RichPresence", difficulty)})";
         }
+
+        public static string GetWorldIcon()
+        {
+            bool hardmode = Main.hardMode;
+            bool corruption = WorldGen.crimson == false;
+            bool crimson = WorldGen.crimson == true;
+
+            if (_seedCache == null)
+            {
+                try
+                {
+                    var mod = ModContent.GetInstance<Discraria>();
+                    byte[] data = mod.GetFileBytes("Assets/seeds.json");
+                    string json = Encoding.UTF8.GetString(data);
+
+                    _seedCache = Newtonsoft.Json.JsonConvert
+                        .DeserializeObject<Dictionary<string, string>>(json);
+                }
+                catch
+                {
+                    _seedCache = new Dictionary<string, string>();
+                }
+            }
+
+     
+            string seed = Main.ActiveWorldFileData.SeedText;
+
+
+            if (_seedCache.TryGetValue(seed, out string specialIcon))
+            {
+                string worldType = corruption ? "corruption" : "crimson";
+                return hardmode ? $"{specialIcon}_{worldType}_hard" : $"{specialIcon}_{worldType}_pre";
+            }
+
+
+            if (crimson || corruption)
+                return hardmode ? "crimson_corruption_hard" : "crimson_corruption_pre";
+
+            if (corruption)
+                return hardmode ? "corruption_hard" : "corruption_pre";
+
+            if (crimson)
+                return hardmode ? "crimson_hard" : "crimson_pre";
+
+            return "terraria";
+        }
+
 
         public static bool IsBoss(NPC npc)
         {
@@ -105,7 +155,7 @@ namespace Discraria.Scripts.Tools
 
         public static string GetBossIcon(string bossName)
         {
-            if (_cache == null)
+            if (_bossCache == null)
             {
                 try
                 {
@@ -115,22 +165,19 @@ namespace Discraria.Scripts.Tools
 
                     string json = Encoding.UTF8.GetString(data);
 
-                    _cache = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+                    _bossCache = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
                 }
                 catch
                 {
-                    _cache = new Dictionary<string, string>();
+                    _bossCache = new Dictionary<string, string>();
                 }
             }
 
-            if (_cache.TryGetValue(bossName, out string icon))
+            if (_bossCache.TryGetValue(bossName, out string icon))
                 return icon;
 
             return "boss_unknown";
         }
-
-        private static Dictionary<string, string> _cache;
-
 
         public static string GetPlayerBiome(Player player)
         {

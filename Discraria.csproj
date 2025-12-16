@@ -12,7 +12,7 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Reference Include="DiscordRPC">
-	    <HintPath>..\TestMod\lib\DiscordRPC.dll</HintPath>
+	    <HintPath>..\Dicraria\lib\DiscordRPC.dll</HintPath>
 	  </Reference>
 	</ItemGroup>
 

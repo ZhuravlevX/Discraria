@@ -1,7 +1,7 @@
 using Terraria.ModLoader;
 using DiscordRPC;
-using Discraria.Script;
-using Discraria.Script.Tools;
+using Discraria.Scripts;
+using Discraria.Scripts.Tools;
 using System.Threading.Tasks;
 
 namespace Discraria
@@ -24,7 +24,7 @@ namespace Discraria
 
             Logger.Info("[DiscordRPC] Using AppID: " + appId);
 
-            await Task.Delay(4000);
+            await Task.Delay(10000);
 
             SetMenuStatus();
         }
@@ -47,7 +47,6 @@ namespace Discraria
                     LargeImageKey = "terraria"
                 }
             });
-
             ModContent.GetInstance<Discraria>().Logger.Info("[DiscordRPC] Presence set: In main menu");
         }
     }
