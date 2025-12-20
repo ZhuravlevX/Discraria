@@ -15,8 +15,10 @@ Mods: {
 			Menu: В главном меню
 			Died: Умер
 			Fighting: Сражается c
-			in: в
 			Explores: Исследует
+		}
+
+		AccusativeBiomes: {
 			forest: лес
 			desert: пустыню
 			jungle: джунгли
@@ -37,17 +39,50 @@ Mods: {
 			bee_hive: пчелиный улей
 			meteor: метеорит
 			underground: подземелье
-			unknown: неизвестный
+			unknown: неизвестность
+		}
+
+		DativeBiomes: {
+			forest: в лесу
+			desert: в пустыне
+			jungle: в джунглях
+			snow: в снежной тайге
+			corruption: в порче
+			crimson: в багрянце
+			hallow: в освящении
+			underworld: в преисподней
+			beach: на пляже
+			dungeon: в темнице
+			space: в космосе
+			glowing_mushroom: в светящихся грибах
+			shimmer: в мерцании
+			granite_cave: в гранитных пещерах
+			marble_cave: в мраморных пещерах
+			graveyard: на кладбище
+			underground_desert: в подземельной пустыне
+			bee_hive: в пчелином улье
+			meteor: у метеорита
+			underground: в подземелье
+			unknown: в неизвестном месте
+		}
+
+		Features: {
+			HP: Здоровье
+			Mana: Мана
+			Defense: Защита
+		}
+
+		TypeWorld: {
 			singleplayer: Одичночный
 			multiplayer: Мультиплеер
 			server: Сервер
+		}
+
+		Difficulties: {
 			classic: Классика
 			expert: Эксперт
 			master: Мастер
 			journey: Путешествие
-			HP: Здоровье
-			Mana: Мана
-			Defense: Защита
 		}
 	}
 }

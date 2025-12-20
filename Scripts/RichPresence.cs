@@ -49,8 +49,7 @@ namespace Discraria.Scripts
                     string biome = GetWorldUtils.GetPlayerBiome(player);
                     string deathState =
                         $"{Tools.Utils.GetTranslation("RichPresence", "Died")} " +
-                        $"{Tools.Utils.GetTranslation("RichPresence", "in")} " +
-                        $"{Tools.Utils.GetTranslation("RichPresence", biome)}...";
+                        $"{Tools.Utils.GetTranslation("DativeBiomes", biome)}...";
 
                     Discraria.client?.SetPresence(new DiscordRPC.RichPresence()
                     {
@@ -82,8 +81,7 @@ namespace Discraria.Scripts
 
                 string bossState =
                     $"{Tools.Utils.GetTranslation("RichPresence", "Fighting")} " +
-                    $"{bossName} {Tools.Utils.GetTranslation("RichPresence", "in")} " +
-                    $"{Tools.Utils.GetTranslation("RichPresence", biome)}";
+                    $"{bossName} {Tools.Utils.GetTranslation("DativeBiomes", biome)}";
 
                 if (bossState != lastState)
                 {
@@ -106,7 +104,7 @@ namespace Discraria.Scripts
             }
 
             string biome2 = GetWorldUtils.GetPlayerBiome(player);
-            string newState = $"{Tools.Utils.GetTranslation("RichPresence", "Explores")} {Tools.Utils.GetTranslation("RichPresence", biome2)}";
+            string newState = $"{Tools.Utils.GetTranslation("RichPresence", "Explores")} {Tools.Utils.GetTranslation("AccusativeBiomes", biome2)}";
 
             if (newState == lastState)
                 return;
@@ -122,9 +120,9 @@ namespace Discraria.Scripts
                     LargeImageKey = biome2,
                     SmallImageKey = GetWorldUtils.GetWorldIcon(),
                     SmallImageText = 
-                    $"{Tools.Utils.GetTranslation("RichPresence", "HP")}: {player.statLifeMax2} | " +
-                    $"{Tools.Utils.GetTranslation("RichPresence", "Mana")}: {player.statManaMax2} | " +
-                    $"{Tools.Utils.GetTranslation("RichPresence", "Defense")}: {player.statDefense}"
+                    $"{Tools.Utils.GetTranslation("Features", "HP")}: {player.statLifeMax2} | " +
+                    $"{Tools.Utils.GetTranslation("Features", "Mana")}: {player.statManaMax2} | " +
+                    $"{Tools.Utils.GetTranslation("Features", "Defense")}: {player.statDefense}"
                 }
             });
             var presence = Discraria.client?.CurrentPresence;

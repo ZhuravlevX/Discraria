@@ -34,7 +34,7 @@ namespace Discraria.Scripts.Tools
                 _ => "unknown"
             };
 
-            return $"{Utils.GetTranslation("RichPresence", type)} ({Utils.GetTranslation("RichPresence", difficulty)})";
+            return $"{Utils.GetTranslation("TypeWorld", type)} ({Utils.GetTranslation("Difficulties", difficulty)})";
         }
 
         public static string GetWorldIcon()

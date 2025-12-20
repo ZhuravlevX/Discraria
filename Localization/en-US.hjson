@@ -15,39 +15,74 @@ Mods: {
 			Menu: In main menu
 			Died: Died
 			Fighting: Fighting
-			in: in
-			Explores: Explores the
-			forest: forest
-			desert: desert
-			jungle: jungle
-			snow: snow
-			corruption: corruption
-			crimson: crimson
-			hallow: hallow
-			underworld: underworld
-			beach: beach
-			dungeon: dungeon
+			Explores: Explores
+		}
+
+		AccusativeBiomes: {
+			forest: the forest
+			desert: the desert
+			jungle: the jungle
+			snow: the snow
+			corruption: the corruption
+			crimson: the crimson
+			hallow: the hallow
+			underworld: the underworld
+			beach: the beach
+			dungeon: the dungeon
 			space: space
-			glowing_mushroom: glowing mushroom
-			shimmer: shimmer
-			granite_cave: granite cave
-			marble_cave: marble cave
-			graveyard: graveyard
-			underground_desert: underground desert
-			bee_hive: bee hive
-			meteor: meteor
-			underground: underground
-			unknown: unknown
+			glowing_mushroom: the glowing mushrooms
+			shimmer: the shimmer
+			granite_cave: the granite caves
+			marble_cave: the marble caves
+			graveyard: the graveyard
+			underground_desert: the underground desert
+			bee_hive: the beehive
+			meteor: the meteor
+			underground: the underground
+			unknown: the unknown
+		}
+
+		DativeBiomes: {
+			forest: in the forest
+			desert: in the desert
+			jungle: in the jungle
+			snow: in the snowy taiga
+			corruption: in the corruption
+			crimson: in the crimson
+			hallow: in the hallow
+			underworld: in the underworld
+			beach: on the beach
+			dungeon: in the dungeon
+			space: in space
+			glowing_mushroom: in the glowing mushrooms
+			shimmer: in the shimmer
+			granite_cave: in the granite caves
+			marble_cave: in the marble caves
+			graveyard: in the graveyard
+			underground_desert: in the underground desert
+			bee_hive: in the beehive
+			meteor: by the meteor
+			underground: in the underground
+			unknown: in an unknown place
+		}
+
+		Features: {
+			HP: HP
+			Mana: Mana
+			Defense: Defense
+		}
+
+		TypeWorld: {
 			singleplayer: Singleplayer
 			multiplayer: Multiplayer
 			server: Server
+		}
+
+		Difficulties: {
 			classic: Classic
 			expert: Expert
 			master: Master
 			journey: Journey
-			HP: HP
-			Mana: Mana
-			Defense: Defense
 		}
 	}
 }
