@@ -9,7 +9,8 @@
 
 - Player presence in the main menu;
 - The biome the player is in;
-- World type and difficulty;
+- Singleplayer or multiplayer, world difficulty;
+- A small world icon in world-type activities (Corruption, Crimson, Hardmode, Secret World Seeds);
 - Boss fighting;
 - Maximum health, mana, and defense.
 
