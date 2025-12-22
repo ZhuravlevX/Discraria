@@ -9,20 +9,15 @@ namespace Discraria
     public class Discraria : Mod
     {
         public static DiscordRpcClient client;
+        public static bool RichPresenceActive = false;
 
         public override async void Load()
         {
             Logger.Info("[DiscordRPC] Load called");
 
-            string appId = Config.Instance?.ApplicationID;
-
-            if (string.IsNullOrWhiteSpace(appId))
-                appId = "731023188930199662";
-
-            client = new DiscordRpcClient(appId);
+            Logger.Info("[DiscordRPC] Load called");
+            client = new DiscordRpcClient("731023188930199662");
             client.Initialize();
-
-            Logger.Info("[DiscordRPC] Using AppID: " + appId);
 
             await Task.Delay(10000);
 
@@ -47,7 +42,8 @@ namespace Discraria
                     LargeImageKey = "terraria"
                 }
             });
-            ModContent.GetInstance<Discraria>().Logger.Info("[DiscordRPC] Presence set: In main menu");
+            var presence = client?.CurrentPresence;
+            Utils.AddLoggerInfo(Config.Instance.ShowLogger, Config.Instance.ShowLoggerChat, "Rich Presence", $"{presence.Details}");
         }
     }
 }

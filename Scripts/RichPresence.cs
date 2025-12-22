@@ -42,7 +42,7 @@ namespace Discraria.Scripts
 
             if (player.dead)
             {
-                if (!wasDead)
+                if (!wasDead && Config.Instance.ShowPlayerDied)
                 {
                     wasDead = true;
 
@@ -63,6 +63,8 @@ namespace Discraria.Scripts
                     });
 
                     lastState = deathState;
+
+                    Tools.Utils.AddLoggerInfo(Config.Instance.ShowLogger, Config.Instance.ShowLoggerChat, "Rich Presence", $"{GetWorldUtils.GetWorldType()} | {deathState}");
                 }
 
                 return;
@@ -74,7 +76,7 @@ namespace Discraria.Scripts
             }
 
             NPC boss = GetWorldUtils.GetActiveBoss();
-            if (boss != null)
+            if (boss != null && Config.Instance?.ShowBossFights == true)
             {
                 string biome = GetWorldUtils.GetPlayerBiome(player);
                 string bossName = boss.FullName;
@@ -98,8 +100,9 @@ namespace Discraria.Scripts
                             SmallImageText = bossName
                         }
                     });
-                }
 
+                    Tools.Utils.AddLoggerInfo(Config.Instance.ShowLogger, Config.Instance.ShowLoggerChat, "Rich Presence", $"{GetWorldUtils.GetWorldType()} | {bossState}");
+                }
                 return;
             }
 
@@ -110,6 +113,21 @@ namespace Discraria.Scripts
                 return;
 
             lastState = newState;
+            string smallText = null;
+            string smallImage = "terraria";
+
+            if (Config.Instance?.ShowPlayerStats == true)
+            {
+                smallText =
+                    $"{Tools.Utils.GetTranslation("Features", "HP")}: {player.statLifeMax2} | " +
+                    $"{Tools.Utils.GetTranslation("Features", "Mana")}: {player.statManaMax2} | " +
+                    $"{Tools.Utils.GetTranslation("Features", "Defense")}: {player.statDefense}";
+            }
+
+            if (Config.Instance?.ShowWorldType == true)
+            {
+                smallImage = GetWorldUtils.GetWorldIcon();
+            }
 
             Discraria.client?.SetPresence(new DiscordRPC.RichPresence()
             {
@@ -118,15 +136,13 @@ namespace Discraria.Scripts
                 Assets = new Assets()
                 {
                     LargeImageKey = biome2,
-                    SmallImageKey = GetWorldUtils.GetWorldIcon(),
-                    SmallImageText = 
-                    $"{Tools.Utils.GetTranslation("Features", "HP")}: {player.statLifeMax2} | " +
-                    $"{Tools.Utils.GetTranslation("Features", "Mana")}: {player.statManaMax2} | " +
-                    $"{Tools.Utils.GetTranslation("Features", "Defense")}: {player.statDefense}"
+                    SmallImageKey = smallImage,
+                    SmallImageText = smallText
                 }
             });
             var presence = Discraria.client?.CurrentPresence;
-            ModContent.GetInstance<Discraria>().Logger.Info($"[DiscordRPC] Presence set: {presence.Details}, {presence.State}");
+            Tools.Utils.AddLoggerInfo(Config.Instance.ShowLogger, Config.Instance.ShowLoggerChat, "Rich Presence", $"{presence.Details} | {presence.State}");
+            // ModContent.GetInstance<Discraria>().Logger.Info($"[DiscordRPC] Presence set: {presence.Details}, {presence.State}");
         }
     }
 }

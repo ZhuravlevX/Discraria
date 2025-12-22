@@ -4,9 +4,39 @@ Mods: {
 			Config: {
 				DisplayName: Rich Presence
 
-				ApplicationID: {
-					Label: Discord Application ID
-					Tooltip: Discord Rich Presence application ID.
+				ShowPlayerStats: {
+					Label: Show Player Stats
+					Tooltip: Displays health, mana, and defense in Discord Rich Presence.
+				}
+
+				ShowBossFights: {
+					Label: Show Boss Fights
+					Tooltip: Displays information about the current boss fight.
+				}
+
+				ShowWorldType: {
+					Label: Show World Type
+					Tooltip: Displays the world type in Rich Presence.
+				}
+
+				ShowPlayerDied: {
+					Label: Show Death in Activity
+					Tooltip: Displays death information in Rich Presence.
+				}
+
+				ShowLogger: {
+					Label: Logging Display
+					Tooltip: Displays mod logs in the console or in a file.
+				}
+
+				ShowLoggerChat: {
+					Label: Chat Log Display
+					Tooltip: Displays mod logs in the world chat.
+				}
+
+				Headers: {
+					Main: General
+					Debug: Debug
 				}
 			}
 		}
